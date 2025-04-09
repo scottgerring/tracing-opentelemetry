@@ -65,7 +65,7 @@ opentelemetry-otlp = { git = 'https://github.com/bantonsson/opentelemetry-rust.g
 opentelemetry-semantic-conventions = { git = 'https://github.com/bantonsson/opentelemetry-rust.git', branch = 'ban/tracing-opentelemetry-base' }
 
 [target.'cfg(not(target_os = "windows"))'.dev-dependencies]
-pprof = { version = "0.14.0", features = ["flamegraph", "criterion"] }
+pprof = { version = "0.14.0", features = ["flamegraph", "criterion", "protobuf-codec"] }
 
 [target.'cfg(all(target_arch = "wasm32", not(target_os = "wasi")))'.dependencies]
 js-sys = "0.3.64"

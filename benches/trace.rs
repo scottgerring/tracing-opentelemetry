@@ -307,7 +307,7 @@ fn events_harness() {
 #[cfg(not(target_os = "windows"))]
 criterion_group! {
     name = benches;
-    config = Criterion::default().with_profiler(PProfProfiler::new(100, Output::Flamegraph(None)));
+    config = Criterion::default().with_profiler(PProfProfiler::new(100, Output::Protobuf));
     targets = many_enters, many_children, many_events
 }
 #[cfg(target_os = "windows")]
